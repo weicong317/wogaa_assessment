@@ -36,9 +36,16 @@ npm run build:widget
 ```
 and the newly compiled file will be in /docs
 #### To use the widget
-Declare a div dom with class "rating_widget" in any part of the html body will do, example
+- Download index.js and index.css in /rating-widget/docs into a chosen path
+- Insert the index.js and index.css into you html file
+- Lastly, in your html file, declare a div dom with class "rating_widget" in any part of the html body but before the index.js will do
 ```
+Example:
+<head>
+    <link href="_your_path_to_index.css" rel="stylesheet" />
+</head
 <body>
     <div class="rating_widget"></div>
+    <script src="_your_path_to_index.js"></script>
 </body>
 ```
