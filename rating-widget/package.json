@@ -1,0 +1,74 @@
+{
+    "name": "rating-widget",
+    "version": "1.0.0",
+    "private": false,
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1",
+        "@craco/craco": "^6.3.0",
+        "axios": "^0.23.0",
+        "clsx": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3"
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "build:widget": "parcel build src/index.js --no-source-maps -d docs",
+        "tidy": "npm run prettier && npm run eslint",
+        "eslint": "eslint --fix --ext js .",
+        "prettier": "prettier --write \"**/*.{js,json}\""
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "eslint:recommended",
+            "plugin:react/recommended",
+            "prettier"
+        ],
+        "rules": {
+            "semi": [
+                "error",
+                "always"
+            ],
+            "indent": [
+                "error",
+                "tab"
+            ],
+            "quotes": [
+                "error",
+                "single"
+            ],
+            "linebreak-style": [
+                "error",
+                "windows"
+            ],
+            "no-unused-vars": "warn",
+            "react/react-in-jsx-scope": 0
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "autoprefixer": "^9",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-react": "^7.26.1",
+        "parcel-bundler": "^1.12.5",
+        "postcss": "^7",
+        "prettier": "^2.4.1",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    },
+    "license": "MIT"
+}
